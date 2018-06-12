@@ -1,0 +1,14 @@
+server:
+  port: 8111 #服务端口
+eureka:
+  client:
+    register-with-eureka: false #是否注册
+    fetch-registry: false #是否搜索服务
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #默认注册中心地址
+  instance:
+    hostname: localhost #注册中心地址配置
+spring:
+  application:
+    name: spring-cloud-eureka #服务名称
+
