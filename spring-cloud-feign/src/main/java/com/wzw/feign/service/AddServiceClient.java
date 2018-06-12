@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Author 吴志伟
  * @Date create by 2018/6/8
  */
-@FeignClient("addService")
+@FeignClient("ADDSERVICE")
 public interface AddServiceClient {
     @RequestMapping(value="/add",method = RequestMethod.GET)
     Integer add(@RequestParam("a")Integer a);

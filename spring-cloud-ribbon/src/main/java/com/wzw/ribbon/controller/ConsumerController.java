@@ -17,6 +17,6 @@ public class ConsumerController {
     @RequestMapping(value="/add",method = RequestMethod.GET)
     public String add(){
         Integer a = 1;
-        return restTemplate.getForEntity("http://addService/add?a="+a,String.class).getBody();
+        return restTemplate.getForEntity("http://ADDSERVICE/add?a="+a,String.class).getBody();
     }
 }
