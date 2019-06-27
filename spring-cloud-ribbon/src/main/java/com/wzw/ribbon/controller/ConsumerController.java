@@ -1,10 +1,10 @@
 package com.wzw.ribbon.controller;
 
+import com.wzw.ribbon.service.ConsumerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @Author 吴志伟
@@ -12,11 +12,12 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class ConsumerController {
+
     @Autowired
-    private RestTemplate restTemplate;
-    @RequestMapping(value="/add",method = RequestMethod.GET)
-    public String add(){
-        Integer a = 1;
-        return restTemplate.getForEntity("http://ADDSERVICE/add?a="+a,String.class).getBody();
+    private ConsumerServiceImpl consumerService;
+
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public String add() {
+        return consumerService.addService(123);
     }
 }

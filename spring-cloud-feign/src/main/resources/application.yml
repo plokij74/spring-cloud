@@ -3,6 +3,9 @@ spring:
     name: fegin-consumer
 server:
   port: 8555
+feign:
+  hystrix:
+    enabled: true #开启hystrix支持
 eureka:
   instance:
     hostname: localhost

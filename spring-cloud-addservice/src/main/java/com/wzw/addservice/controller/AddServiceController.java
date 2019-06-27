@@ -21,10 +21,10 @@ public class AddServiceController {
     DiscoveryClient discoveryClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add(@RequestParam Integer a) {
+    public String add(@RequestParam Integer a) {
         ServiceInstance instance = discoveryClient.getInstances(discoveryClient.getServices().get(0)).get(0);
         a++;
         logger.info("/add host:" + instance.getHost() + ",port:" + instance.getPort() + ",service_id:" + instance.getServiceId() + ",result:" + a);
-        return a;
+        return String.valueOf(a);
     }
 }

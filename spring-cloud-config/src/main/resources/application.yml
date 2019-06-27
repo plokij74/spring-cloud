@@ -1,0 +1,13 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/plokij74/spring-cloud
+          search-paths: config-repo #gitœ‡∂‘¬∑æ∂
+          username: plokij74
+          password: wzw123456
