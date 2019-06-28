@@ -13,3 +13,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+management:
+  server:
+    servlet:
+      context-path: / #spring-boot2.0以上需要加这个参数，不知道为什么
