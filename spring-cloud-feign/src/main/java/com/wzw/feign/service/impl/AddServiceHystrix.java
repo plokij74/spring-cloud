@@ -13,4 +13,9 @@ public class AddServiceHystrix implements AddServiceClient {
     public String add(Integer a) {
         return "method add is faild";
     }
+
+    @Override
+    public String getName() {
+        return "method getName is faild";
+    }
 }

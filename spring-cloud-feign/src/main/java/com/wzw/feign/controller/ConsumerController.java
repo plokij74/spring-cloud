@@ -20,4 +20,9 @@ public class ConsumerController {
     public String add(@PathVariable Integer a){
         return addServiceClient.add(a);
     }
+
+    @RequestMapping(value = "/getName",method = {RequestMethod.POST,RequestMethod.GET})
+    public String getName(){
+        return addServiceClient.getName();
+    }
 }

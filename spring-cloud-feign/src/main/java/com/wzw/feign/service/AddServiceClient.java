@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(value = "ADDSERVICE",fallback = AddServiceHystrix.class)
 public interface AddServiceClient {
+
     @RequestMapping(value="/add",method = RequestMethod.GET)
     String add(@RequestParam("a") Integer a);
+
+    @RequestMapping(value="/getName",method = {RequestMethod.POST,RequestMethod.GET})
+    String getName();
 }
