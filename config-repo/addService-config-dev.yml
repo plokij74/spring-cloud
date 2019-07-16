@@ -4,4 +4,4 @@ spring:
 server:
   port: 8222
 
-name: 张三
+name: "张三"
