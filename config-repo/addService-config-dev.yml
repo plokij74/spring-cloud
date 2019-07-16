@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: addService
+server:
+  port: 8222
+
+name: 张三
