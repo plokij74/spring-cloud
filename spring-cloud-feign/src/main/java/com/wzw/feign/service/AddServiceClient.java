@@ -16,6 +16,6 @@ public interface AddServiceClient {
     @RequestMapping(value="/add",method = RequestMethod.GET)
     String add(@RequestParam("a") Integer a);
 
-    @RequestMapping(value="/getName",method = {RequestMethod.POST,RequestMethod.GET})
+    @RequestMapping(value="/getName",method = RequestMethod.GET)
     String getName();
 }

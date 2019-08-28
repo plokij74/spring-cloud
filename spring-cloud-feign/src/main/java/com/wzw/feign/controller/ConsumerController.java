@@ -2,6 +2,7 @@ package com.wzw.feign.controller;
 
 import com.wzw.feign.service.AddServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,7 +22,7 @@ public class ConsumerController {
         return addServiceClient.add(a);
     }
 
-    @RequestMapping(value = "/getName",method = {RequestMethod.POST,RequestMethod.GET})
+    @RequestMapping(value = "/getName",method = RequestMethod.GET)
     public String getName(){
         return addServiceClient.getName();
     }

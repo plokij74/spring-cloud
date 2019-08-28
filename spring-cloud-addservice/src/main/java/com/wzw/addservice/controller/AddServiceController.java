@@ -32,7 +32,7 @@ public class AddServiceController {
         return String.valueOf(a);
     }
 
-    @RequestMapping(value = "/getName", method = {RequestMethod.POST,RequestMethod.GET})
+    @RequestMapping(value = "/getName", method = RequestMethod.GET)
     public String getName(){
         return name;
     }

@@ -11,6 +11,15 @@ spring:
           search-paths: config-repo #git相对路径
           username: plokij74
           password: wzw123456
+    bus:
+      trace:
+        enabled: false
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: 123456
+
 eureka:
   port: 8111
   instance:
@@ -18,3 +27,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka/
+management:
+  cloudfoundry:
+    enabled: false

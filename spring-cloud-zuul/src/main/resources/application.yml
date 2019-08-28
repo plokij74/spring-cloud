@@ -1,0 +1,17 @@
+server:
+  port: 8666
+spring:
+  application:
+    name: zuul-consumer
+eureka:
+  instance:
+    port: 8111
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+zuul:
+  routes:
+    service-api:
+      path: /wzw/**
+      serviceId: fegin-consumer  #自动代理eureka上所有服务 支持直接通过 http://zuulHost:zuulPort/serviceId/**直接转发
