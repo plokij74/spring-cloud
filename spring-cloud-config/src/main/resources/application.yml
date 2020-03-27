@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/plokij74/spring-cloud
           search-paths: config-repo #git相对路径
           username: plokij74
-          password: wzw1994//
+          password: wzw123456
     bus:
       trace:
         enabled: false
